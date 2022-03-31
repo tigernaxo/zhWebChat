@@ -1,0 +1,7 @@
+在 443 運行 Kestrel 的方法 
+Reference: https://stackoverflow.com/questions/57231632/how-to-use-domain-url-with-kestrel-in-asp-net-core-app
+
+set ASPNETCORE_URLS=https://192.168.11.112:443 
+WebChat.exe
+
+htttps://192.168.11.112

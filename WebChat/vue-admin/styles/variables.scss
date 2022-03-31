@@ -1,0 +1,18 @@
+@import '~vuetify/src/styles/styles.sass';
+// 設定文字大小參考基準
+$font-size-root: 1.5em;
+.v-picker.v-picker--date {
+  height: 480px;
+}
+// 卡片的 title 文字大小
+$card-title-font-size: map-deep-get($headings, 'subtitle-1', 'size') !default;
+// 整體的字體
+$heading-font-family: 'Microsoft JhengHei', 'Roboto', sans-serif !important;
+$body-font-family: 'Microsoft JhengHei', 'Roboto', sans-serif !important;
+// $body-font-family:  'Roboto', sans-serif !default;
+.peter-text {
+  font-size: 1em;
+}
+.peter-text .v-label {
+  font-size: 1em;
+}
