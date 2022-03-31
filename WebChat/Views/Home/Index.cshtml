@@ -6,7 +6,7 @@
 <button href="#" id="btnStartChat">Start Chat</button>
     <script>
         window.onload = function () {
-            window.open('/chat', 'chatHub', "resizable,scrollbars,status,location");
+            window.open('@Url.Content("~/chat")', 'chatHub', "resizable,scrollbars,status,location");
             document.getElementById("btnStartChat").addEventListener('click', function () {
                 window.open('@Url.Content("~/chat")', 'chatHub', "resizable,scrollbars,status,location");
             })
