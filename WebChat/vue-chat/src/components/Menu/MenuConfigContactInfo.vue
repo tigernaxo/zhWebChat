@@ -25,6 +25,7 @@
 <script>
 import ModalContainer from '../ModalContainer.vue'
 import { inject, ref, computed, reactive } from 'vue'
+import config from '../../../vue.configExt'
 export default {
   components: {
     ModalContainer
@@ -41,7 +42,7 @@ export default {
     let altImg = '/user/default/head/default.jpg'
     let menuInfoHeadStyle = computed(() => {
       let fileName = store.users[`${data.userId}@1`]?.photo
-      let path = `/user/${data.userId}/head/${fileName}`
+      let path = `${config.appPath}/user/${data.userId}/head/${fileName}`
       let imgPath = fileName ? `${path}` : ''
       return {
         'background-image': `url('${imgPath}') ,url('${altImg}')`
@@ -77,7 +78,7 @@ export default {
   width: 80px;
   border-radius: 50%;
   // background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkI2ibEgcyv9fFARVdVCxqH_yBU64f6JSAg&usqp=CAU');
-  // background-image: url('/user/3/head/20210111151259956-cbd3f7cd-6873-4899-b0af-1dbcb50165c2.png');
+  // background-image: url('../user/3/head/20210111151259956-cbd3f7cd-6873-4899-b0af-1dbcb50165c2.png');
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -25,7 +25,7 @@
         <template v-else>
           <div v-if="!status.isFileImage">
             <a
-              :href="`/room/${msg.roomId}/${msg.hashName}`"
+              :href="`${config.appPath}/room/${msg.roomId}/${msg.hashName}`"
               class="m-0"
               target="_blank"
               :download="msg.fileName"
@@ -40,7 +40,7 @@
             <img
               class="mw-100"
               v-if="status.isFileImage"
-              :src="`/room/${msg.roomId}/${msg.hashName}`"
+              :src="`../room/${msg.roomId}/${msg.hashName}`"
             />
           </div>
         </template>
@@ -62,6 +62,7 @@
 <script>
 import { inject, onMounted } from 'vue'
 import file from '@/zh/file'
+import config from '../../../vue.configExt'
 export default {
   props: {
     msg: Object
@@ -109,6 +110,7 @@ export default {
       return newStr
     }
     return {
+      config,
       classObj2,
       status,
       store,
